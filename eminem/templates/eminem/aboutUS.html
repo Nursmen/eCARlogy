@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+  <div class="header" id="">
+    <div class="container">
+      <div class="header__wrap">
+        <div class="logo">
+          <img src="{% static 'images/eCARlogy.png' %}" alt="" />
+          <a href="{% url 'index' %}"><h1>e<span>CAR</span>logy</h1></a>
+        </div>
+        <ul class="header__nav">
+          <li><a href="{% url 'report' %}">Демо</a></li>
+          <li>|</li>
+          <li><a href="{% url 'aboutUS' %}">О нас</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+    <div >
+        <div class="content">
+          <div class="container">
+            <div class="text">
+              <h2>
+                Данный сайт поможет избавиться от людей, которые паркуруются в
+                неположенном месте
+              </h2>
+              <div class="textImg">
+                <!-- <img src="./img/CarNumber.jpg" alt="CarNumber" /> -->
+                <p>
+                  Он будет работать по такому принципу: <br />вы скидываете фотку и мы
+                  анализируем её
+                </p>
+              </div>
+              <div class="textImg">
+                <p>После этого выдаем штраф по номеру машины <br>
+                  Фото отправить можно только сделав <br> на месте, отправить фото с памяти устройства нельзя.
+                  <br>
+                  Также бывают случаи, когда машины мешают <br> выйти из парковки другим машинам.</p>
+                <!-- <img src="./img/Geomap.jpeg" alt="Geomap" /> -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer class="footer">
+            <div class="footer__wrap">
+              <div class="logo">
+                <img src="{% static 'images/eCARlogy.png' %}" alt="" />
+                <a href="{% url 'index' %}"> <h1>e<span>CAR</span>logy</h1></a>
+              </div>
+              <div class="NavRow">
+                <div class="row">
+                  <ul>
+                    <li><a href="">О нас</a></li>
+                    <li><a href="">Главная</a></li>
+                    <li><a href="">Связаться с нами</a></li>
+                  </ul>
+                </div>
+                <div class="row">
+                  <ul>
+                    <li><a href="">FAQ</a></li>
+                    <li><a href="">Политикаq</a></li>
+                    <li><a href="">Безопасность</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </footer>
+</body>
+</html>

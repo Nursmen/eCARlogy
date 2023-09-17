@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>eCARlogy</title>
+    <link rel="stylesheet" href="style.css" />
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  </head>
+  <body>
+    <div class="header" id="">
+      <div class="container">
+        <div class="header__wrap">
+          <div class="logo">
+            <img src="{% static 'images/eCARlogy.png' %}" alt="" />
+            <a href="{% url 'index' %}"><h1>e<span>CAR</span>logy</h1></a>
+          </div>
+          <ul class="header__nav">
+            <li><a href="{% url 'report' %}">Демо</a></li>
+            <li>|</li>
+            <li><a href="{% url 'aboutUS' %}">О нас</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="content2">
+      <div class="container">
+        <div class="main-block">
+          <div class="title">
+            <h2>
+              e<span>CAR</span>logy - Делайте город чище и безопаснее с помощью искусственного интеллекта
+            </h2>
+            <a href="{% url 'report' %}"><button>Попробовать сейчас</button></a>
+          </div>
+          
+          <div class="textImg">
+            <img src="{% static 'images/CarNumber.jpg' %}" alt="CarNumber" />
+          </div>
+          
+        </div><div class="description-block">
+          <h1>e<span>CAR</span>logy</h1>
+          <h3>это революционное мобильное приложение на базе AI, которое превращает каждого пользователя в активного защитника экологии и законности. Сделали фото неправильно припаркованной машины у моря или в других запрещенных зонах? Наш алгоритм автоматически определяет номер автомобиля и его геолокацию, а затем отправляет данные для наложения штрафа. Бонус? Вы получаете процент от штрафа как поощрение за вашу активность. С eCARlogy, очищаем мир стало проще и выгоднее!</h3>
+        </div>
+        <div class="more-block">
+          <ul>
+            <li>
+              <h3>Экологический Аспект</h3>
+              <p>Применение нашего приложения напрямую способствует соблюдению экологических норм, предотвращая загрязнение прибрежных и других запрещенных зон.</p>
+            </li>
+            <li>
+              <h3>Соблюдение Законности</h3>
+              <p>Наше приложение помогает усилить соблюдение законов о парковке, уменьшая количество нарушений и повышая уровень безопасности на дорогах.</p>
+            </li>
+            <li>
+              <h3>Культурный Код</h3>
+              <p>eCARlogy также служит культурным фактором, формируя у сознательных граждан чувство ответственности за окружающую среду и закон.
+              </p>
+            </li>
+          </ul>
+          <img src="{% static 'images/Geomap.jpeg' %}" alt="Geomap" />
+          </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="footer__wrap">
+        <div class="logo">
+          <img src="{% static 'images/eCARlogy.png' %}" alt="" />
+          <a href="{% url 'index' %}"> <h1>e<span>CAR</span>logy</h1></a>
+        </div>
+        <div class="NavRow">
+          <div class="row">
+            <ul>
+              <li><a href="">Главная</a></li>
+              <li><a href="">Связаться с нами</a></li>
+              <li><a href="">О нас</a></li>
+            </ul>
+          </div>
+          <div class="row">
+            <ul>
+              <li><a href="">FAQ</a></li>
+              <li><a href="">Политика</a></li>
+              <li><a href="">Безопасность</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

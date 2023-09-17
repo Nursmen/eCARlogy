@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+  <div class="header" id="">
+    <div class="container">
+      <div class="header__wrap">
+        <div class="logo">
+          <img src="{% static 'images/eCARlogy.png' %}" alt="" />
+          <a href="{% url 'index' %}"><h1>e<span>CAR</span>logy</h1></a>
+        </div>
+        <ul class="header__nav">
+          <li><a href="{% url 'report' %}">Демо</a></li>
+          <li>|</li>
+          <li><a href="{% url 'aboutUS' %}">О нас</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+    </div>
+    <div >
+      <div class="content">
+
+        <h1 class="reportText">Данный сайт поможет избавиться от людей, которые паркуются в неположенном месте</h1>
+        <div class="imgcontainer">
+          <figure class="image-container">
+            <img id="chosen-image">
+            <figcaption id="file-name"></figcaption>
+
+          </figure>
+          
+          <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form }}
+            <!-- <button type="submit">Upload</button> -->
+            <!-- <input type="file" id="upload-button" href="{% url 'report' %}" accept="image/*"> -->
+            <!-- <label for="upload-button">
+              <i class="fas fa-upload"></i> &nbsp; choose a photo
+            </label> -->
+            <button type="submit" value="" id="submit" accept="image"></button>
+            <label for="submit">
+              <a href="{% url 'result' %}"><i class="fas fa-upload"></i> &nbsp; submit</a>
+            </label>
+          </form>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+        <div class="footer__wrap">
+          <div class="logo">
+            <img src="{% static 'images/eCARlogy.png' %}" alt="" />
+            <a href="{% url 'index' %}"> <h1>e<span>CAR</span>logy</h1></a>
+          </div>
+          <div class="NavRow">
+            <div class="row">
+              <ul>
+                <li><a href="">О нас</a></li>
+                <li><a href="">Главная</a></li>
+                <li><a href="">Связаться с нами</a></li>
+              </ul>
+            </div>
+            <div class="row">
+              <ul>
+                <li><a href="">FAQ</a></li>
+                <li><a href="">Политика</a></li>
+                <li><a href="">Безопасность</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+    
+    <!--Script-->
+
+    <script src="{% static 'js/report.js' %}"></script>
+</body>
+</html>
